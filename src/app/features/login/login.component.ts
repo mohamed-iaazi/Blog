@@ -22,13 +22,6 @@ export class LoginComponent {
   authservice : AuthService=inject(AuthService);
 
   Login() {
-    this.authservice.login(this.email, this.password).subscribe((succes)=>{
-      console.log('login successful');
-      this.router.navigate(['/Dashboard']);
-
-    } ,  error => {
-      console.log(error);
-    })
-
+ this.authservice.login(this.email, this.password)
   }
 }
